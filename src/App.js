@@ -3,8 +3,11 @@ import Navbar from "./components/navbar/navbar";
 import Hero from "./components/hero/hero";
 import Intro from "./components/intro/intro";
 import Parallax from "./components/parallax/parallax";
-// import './hooks/prevScrollpos';
-// import './hooks/background';
+import About from "./components/about/about";
+import Footer from "./components/footer/footer";
+
+import './hooks/prevScrollpos';
+import './hooks/background';
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       <Hero />
       <Intro />
       <Parallax />
+      <About />
+      <Footer />
     </div>
   );
 }

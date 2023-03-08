@@ -1,4 +1,3 @@
-import logo from "../../images/ank.svg";
 import "./intro.scss";
 
 function Intro() {
