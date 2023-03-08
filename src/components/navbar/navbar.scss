@@ -1,0 +1,128 @@
+@import '../../scss/base/all' ;
+@import '../../scss/pages/all' ;
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: all 1s ease;
+	z-index: 9999;
+	background-color: $color-black;
+	padding: 0 1.5rem 0 0;
+	font-family: sans-serif;
+	color: $color-white;
+	a {
+		padding: 0.5rem;
+	}
+	.logo {
+		height: 2rem;
+		// width: 20%;
+	}
+
+	&__link {
+		@include text-regular;
+		// margin: 0 0.5rem;
+		color: $color-white;
+		font-size: 0.9rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		a:not(.lang) {
+			padding: 1rem;
+			border-bottom: 3px solid transparent;
+			transition: all 1.5s ease;
+			&:hover {
+				color: #ff9b19;
+				border-bottom: 3px solid #ff9b19;
+			}
+		}
+	}
+	&__items {
+		display: flex;
+	}
+	.right {
+		list-style-type: none;
+	}
+}
+
+.toggle {
+	display: none;
+	padding-right: 1em;
+	@media screen and (max-width: $bp-m) {
+		padding: 0;
+		top: 0.8rem;
+	}
+}
+.dropbtn {
+	// background-color: #4caf50;
+	color: white;
+	padding: 1rem;
+	// font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.language {
+	position: relative;
+	display: inline-block;
+	&-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		right: 0rem;
+		top: 2.5rem;
+		// min-width: 160px;
+		// box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		@media screen and (max-width: $bp-m) {
+			right: -4rem;
+			top: -0.5rem;
+		}
+		a {
+			color: $color-black;
+			padding: 0.5rem;
+			text-decoration: none;
+			display: block;
+			&:hover {
+				background-color: #f1f1f1;
+			}
+		}
+	}
+	&:hover .language-content {
+		display: block;
+	}
+	&:hover .dropbtn {
+		// background-color: fuchsia;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		&__items {
+			display: none;
+			flex-direction: column;
+		}
+		.right {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+
+	.navbar__toggleShow {
+		display: flex;
+	}
+
+	.toggle {
+		align-self: flex-end;
+		display: initial;
+		position: absolute;
+		cursor: pointer;
+	}
+}

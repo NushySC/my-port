@@ -1,0 +1,81 @@
+//Breakpoints
+$bp-xxl: 1500px;
+$bp-xl: 1200px;
+$bp-l: 1024px;
+$bp-m: 768px;
+$bp-s: 425px;
+$bp-xs: 325px;
+
+// Reusuable classes
+.justify-c {
+	justify-content: center;
+	align-items: center;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.fifty {
+	width: 50%;
+}
+.skills {
+	flex-wrap: wrap;
+}
+
+.container {
+	max-width: 1000px;
+	width: 55%;
+	margin: 4rem auto;
+	padding: 0 1.5rem;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		width: 70%;
+	}
+	@media screen and (max-width: 425px) {
+		width: 100%;
+	}
+
+	&__title {
+		@include title-bold;
+		font-size: 6.5rem;
+		margin-bottom: 2rem;
+		@media screen and (max-width: 500px) {
+			font-size: 4rem;
+			// line-height: 3.5rem;
+		}
+	}
+
+	&__text {
+		@include text-regular;
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+		margin: 1rem 0;
+		&--skill {
+			@include text-regular;
+			font-size: 1rem;
+			line-height: 2rem;
+			margin-bottom: 1rem;
+		}
+	}
+	.me {
+		border-radius: 50%;
+		filter: grayscale(1);
+	}
+
+	strong {
+		@include text-bold;
+	}
+}
+
+.skill {
+	@include text-bold;
+	font-size: 2.2rem;
+	// margin-top: 2.5rem;
+	line-height: 6rem;
+}

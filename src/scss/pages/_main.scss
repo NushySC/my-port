@@ -1,0 +1,201 @@
+// Base styles
+
+html {
+	scroll-behavior: smooth;
+}
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-padding-top: 70px; /* height of sticky header */
+}
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #232323;
+	color: #ebebd9; /* IE 8 */
+	transition: background-color 3s;
+}
+//TODO: change background color for explorer
+//TODO: add gradient or some animation, maybe full gradient because it can interract with showing navbar and full height first frame
+
+.header {
+	background-image: linear-gradient(#e7e7e73a 2px, transparent 2px), linear-gradient(to right, #e7e7e73a 2px, #e5e5f700 2px);
+	background-size: 1rem 1rem;
+	background-color: $color-black;
+	min-height: 30vh;
+	padding: 5rem 2rem 2rem 2rem;
+	text-align: center;
+	@media screen and (max-width: $bp-m) {
+		min-height: auto;
+		padding: 5rem 1rem 2rem 1rem;
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		&--main {
+			@include title-bold;
+			font-size: 8rem;
+			// line-height: 9.5rem;
+			text-align: right;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			span:nth-of-type(1) {
+				display: block;
+				background-color: #ca4246;
+				background-image: $linear-yellow;
+				background-size: 100%;
+				background-repeat: repeat;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-right: 1rem;
+			}
+			span:nth-of-type(2) {
+				display: block;
+				background-color: #ca4246;
+				background-image: $linear-pink;
+				background-size: 100%;
+				background-repeat: repeat;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			@media screen and (max-width: $bp-m) {
+				font-size: 3rem;
+				flex-direction: column;
+			}
+		}
+		&--sub {
+			@include title-regular;
+			font-size: 2rem;
+			color: $color-white;
+			background-color: $color-black;
+			padding: 1rem 2rem;
+			width: max-content;
+			text-align: center;
+			margin-top: 2rem;
+			max-width: 100%;
+
+			@media screen and (max-width: $bp-m) {
+				font-size: 1rem;
+				line-height: 1rem;
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+.skills .fab {
+	position: relative;
+	display: inline-block;
+}
+
+.container--special {
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+
+.section:not(:last-of-type) {
+	min-height: 80vh;
+	margin: 0 auto;
+
+	.bg__orange .fab {
+		color: $darkpink;
+	}
+	.bg__green .fab {
+		color: $color-red;
+	}
+	.bg__red .fab {
+		color: $color-mint;
+	}
+	.fab {
+		height: 3rem;
+		width: 3rem;
+		font-size: 3rem;
+		margin: 1rem;
+		transition: all 2s ease;
+
+		&:hover {
+			// transform: scale(1.2);
+			color: $color-white;
+		}
+
+		.frontend,
+		.ui,
+		.e-commerce {
+			margin: 1.5rem 0;
+		}
+	}
+}
+#about {
+	.content {
+		// display: flex;
+		// flex-direction: row;
+		// @media screen and (max-width: $bp-m) {
+		// 	flex-direction: column;
+		// }
+		text-align: center;
+		.text {
+			text-align: justify;
+			margin-right: 2rem;
+			@media screen and (max-width: $bp-m) {
+				width: 100%;
+				margin-right: 0rem;
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $color-black;
+	color: $color-white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+.icons-big {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	margin-bottom: 1rem;
+
+	a {
+		font-size: 2rem;
+		width: 5rem;
+		transition: all 1s ease;
+		text-align: center;
+		&:hover {
+			font-size: 3rem;
+			width: 5rem;
+		}
+	}
+}
+
+.copyright {
+	@include text-regular;
+	font-size: 0.8rem;
+}
+.profile-pic {
+	float: right;
+	shape-outside: circle(50%);
+	margin: 1.5rem;
+	width: 40%;
+	&__img {
+		filter: grayscale(0.5);
+		border-radius: 50%;
+		box-shadow: 3px 2px 15px 0px rgba(0, 0, 0, 0.54);
+		@media screen and (max-width: $bp-l) {
+			margin: 0 auto;
+		}
+	}
+}
