@@ -5,6 +5,7 @@ import Intro from "./components/intro/intro";
 import Parallax from "./components/parallax/parallax";
 import About from "./components/about/about";
 import Footer from "./components/footer/footer";
+import Portfolio from "./components/portfolio/portfolio";
 
 import './hooks/prevScrollpos';
 import './hooks/background';
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <Intro />
       <Parallax />
+      <Portfolio />
       <About />
       <Footer />
     </div>

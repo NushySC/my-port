@@ -1,0 +1,42 @@
+[class^='tooltip-'],
+[class*=' tooltip-'] {
+	position: absolute;
+}
+
+[class^='tooltip-']:hover::after,
+[class*=' tooltip-']:hover::after {
+	position: absolute;
+	font-size: 0.6rem;
+	transform: translateY(-130%) translateX(5%);
+	padding: 0.4rem;
+	color: #232323;
+	font-family: sans-serif;
+	font-weight: bold;
+	background-color: #ccffcc;
+	border-radius: 4px;
+	z-index: 1;
+}
+
+//TODO: change color tooltip and font
+
+$content: (
+	'html': 'HTML5',
+	'css': 'CSS3',
+	'js': 'JavaScript',
+	'sketch': 'Sketch',
+	'react': 'React',
+	'figma': 'Figma',
+	'gulp': 'Gulp',
+	'vue': 'Vue',
+	'boot': 'Bootstrap',
+	'sass': 'Sass',
+	'angular': 'Angular',
+	'shopify': 'Shopify',
+	'wordpress': 'Wordpress',
+);
+
+@each $name, $value in $content {
+	.tooltip-#{$name}:hover::after {
+		content: $value;
+	}
+}

@@ -3,19 +3,19 @@ import "./intro.scss";
 function Intro() {
   return (
     <section
-    class="section"
+    className="section"
     id="intro"
     data-text=" #232323"
     data-bg="#f5c91a"
   >
-    <div class="container">
-      <h2 class="container__title">Intro</h2>
+    <div className="container">
+      <h2 className="container__title">Intro</h2>
 
-      <p class="container__text">
+      <p className="container__text">
         I create successful websites that are fast, easy to use,
         and built with best practices.
       </p>
-      <p class="container__text">
+      <p className="container__text">
         I am a visual designer and web developer with passion
         for creating an interactive, useful, and delightful user
         experience. As a designer, I enjoy solving complex
@@ -23,7 +23,7 @@ function Intro() {
         on multi-disciplinary collaboration and rapid iteration.
       </p>
 
-      <p class="container__text">
+      <p className="container__text">
         My skills are broad: from <strong>frontend</strong> and
         backend development to <strong>UX/UI</strong> and
         <strong>graphic design</strong>, I enjoy each aspect,
@@ -31,7 +31,7 @@ function Intro() {
         finish, for clients all over the world.
       </p>
 
-      <p class="container__text">
+      <p className="container__text">
         I value simple
         <strong>
           content structure, clean design patterns and
@@ -45,7 +45,7 @@ function Intro() {
         make the most optimal products.
       </p>
 
-      <p class="container__text">
+      <p className="container__text">
         While most of my attention is on interactive projects, I
         also do branding from time to time. This includes logo
         design, business cards, and other printed materials.
